@@ -1,3 +1,8 @@
 export default function Home() {
-  return <main>Home</main>;
+  // TODO: Blog Landing Page
+  return (
+    <main>
+      <section className="h-screen"></section>
+    </main>
+  );
 }
