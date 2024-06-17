@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/Button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/Popover";
 import Navigation from "@/components/Navigation";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
@@ -20,9 +21,9 @@ export default function Header() {
       <div className="place-self-end self-center">
         <Popover>
           <PopoverTrigger>
-            <Button size="icon">
+            <div className={cn(buttonVariants({ size: "icon" }))}>
               <MenuIcon size={16} />
-            </Button>
+            </div>
           </PopoverTrigger>
 
           <PopoverContent>

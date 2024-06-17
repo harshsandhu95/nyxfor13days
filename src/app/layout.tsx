@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
       <body className={cn(sansFont.variable, serifFont.variable)}>
         <RootProvider>
           {children}
-          <Toaster richColors closeButton className="print:hidden" />
+          <Toaster richColors className="print:hidden" />
         </RootProvider>
       </body>
     </html>
