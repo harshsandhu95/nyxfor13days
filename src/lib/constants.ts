@@ -49,7 +49,7 @@ export const experience: Experience[] = [
   },
   {
     id: 2,
-    company: "Pragyaware Infotech Pvt. Ltd.",
+    company: "Pragyaware Informatics Pvt. Ltd.",
     position: "Jr. Frontend Developer",
     location: "Ludhiana, Ind",
     startDate: "Feb 2022",
@@ -59,7 +59,7 @@ export const experience: Experience[] = [
   },
   {
     id: 3,
-    company: "Pragyaware Infotech Pvt. Ltd.",
+    company: "Pragyaware Informatics Pvt. Ltd.",
     position: "Frontend Developer",
     location: "Ludhiana, Ind",
     startDate: "Feb 2020",
