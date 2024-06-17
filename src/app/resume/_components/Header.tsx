@@ -20,7 +20,7 @@ export default function Header() {
           <BreadcrumbSeparator />
 
           <BreadcrumbItem>
-            <BreadcrumbPage>CV</BreadcrumbPage>
+            <BreadcrumbPage>Resume</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
