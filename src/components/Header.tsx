@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { buttonVariants } from "@/components/ui/Button";
 import {
   Popover,
   PopoverContent,
