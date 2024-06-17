@@ -1,11 +1,10 @@
 import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import RootProvider from "@/components/RootProvider";
 import { Toaster } from "@/components/ui/Sonner";
-
-const font = Inter({ subsets: ["latin"] });
+import { cn } from "@/lib/utils";
+import { sansFont, serifFont } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Harsh Sandhu",
@@ -17,7 +16,7 @@ interface Props extends PropsWithChildren { }
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={cn(sansFont.variable, serifFont.variable)}>
         <RootProvider>
           {children}
           <Toaster richColors closeButton className="print:hidden" />
