@@ -13,8 +13,8 @@ export default async function Home() {
         <Badge className="md:w-fit flex items-center justify-center gap-2">
           <HardHatIcon size={16} /> Under Development
         </Badge>
-        <h1 className="text-7xl eading-tight">Hey, I am Harsh Sandhu</h1>
-        <p className="text-lg leading-normal">{details.objective}</p>
+        <h1 className="text-7xl eading-tight">Hey, I am {details?.name}</h1>
+        <p className="text-lg leading-normal">{details?.objective}</p>
         <Button asChild>
           <Link href="">Let&apos;s Connect!</Link>
         </Button>
