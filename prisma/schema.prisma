@@ -6,3 +6,61 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model certifications {
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  date   String
+  id_    Int      @map("id")
+  issuer String
+  skills String[]
+  title  String
+}
+
+model details {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  github    String
+  linkedin  String
+  location  String
+  name      String
+  objective String
+  phone     String
+  title     String
+  website   String
+}
+
+model education {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  degree      String
+  description String
+  endDate     String
+  id_         Int    @map("id")
+  institute   String
+  location    String
+  startDate   String
+}
+
+model experience {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  company     String
+  description String
+  endDate     String
+  id_         Int    @map("id")
+  location    String
+  position    String
+  startDate   String
+}
+
+model projects {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  id_         Int     @map("id")
+  link        String?
+  title       String
+}
+
+model skills {
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  skills String[]
+  title  String
+}
