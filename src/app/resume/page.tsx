@@ -5,17 +5,13 @@ import ExperienceItem from "./_components/ExperienceItem";
 import SkillsItem from "./_components/SkillsItem";
 import ProjectItem from "./_components/ProjectItem";
 import CertificationItem from "./_components/CertificationItem";
-import {
-  certifications,
-  details,
-  education,
-  experience,
-  projects,
-  skills,
-} from "@/lib/constants";
 import { prefixHttps } from "@/lib/utils";
+import { getResume } from "@/app/actions";
 
-export default function Page() {
+export default async function Page() {
+  const { details, experience, education, skills, certifications, projects } =
+    await getResume();
+
   return (
     <div className="py-16 print:py-0 space-y-6">
       {/* Header */}
