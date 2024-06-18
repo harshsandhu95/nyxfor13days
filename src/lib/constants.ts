@@ -1,18 +1,5 @@
 import { Certification, Education, Experience, Project, Skill } from "./types";
 
-export const details = {
-  name: "Harshdeep Sandhu",
-  title: "Software Engineer",
-  location: "Ludhiana, India",
-  email: "me@harshsandhu.com",
-  phone: "(+91) 734 723 7673",
-  website: "harshsandhu.com",
-  linkedin: "linkedin.com/in/nyxfor13days",
-  github: "github.com/nyxfor13days",
-  objective:
-    "Tech enthusiast and problem solver with a knack for creative solutions. Passionate about innovation, lifelong learning, and making a positive impact. 🚀🌟",
-};
-
 export const education: Education[] = [
   {
     id: 1,
