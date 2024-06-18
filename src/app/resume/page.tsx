@@ -24,36 +24,36 @@ export default async function Page() {
       {/* Header */}
       <section className="space-y-2">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-lg font-bold text-center">{details.name}</h1>
-          <p className="text-center">{details.title}</p>
+          <h1 className="text-lg font-bold text-center">{details?.name}</h1>
+          <p className="text-center">{details?.title}</p>
         </div>
 
         <hr className="divide-y" />
 
         <ul className="flex flex-wrap items-center justify-center md:justify-between print:justify-between gap-1 print:text-sm list-none list-inside">
-          <li>{details.location}</li>
+          <li>{details?.location}</li>
           <Dot size={16} />
-          <li>{details.email}</li>
+          <li>{details?.email}</li>
           <Dot size={16} />
-          <li>{details.phone}</li>
+          <li>{details?.phone}</li>
           <Dot size={16} />
           <li className="flex items-center gap-1">
-            <Construction size={12} /> {details.website}
+            <Construction size={12} /> {details?.website}
           </li>
         </ul>
 
         <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 place-items-center md:place-items-start print:place-items-start gap-2">
           <div className="flex items-center gap-2">
             <Linkedin size={14} stroke="0" className="fill-current" />
-            <Link href={prefixHttps(details.linkedin)} target="_blank">
-              {details.linkedin}
+            <Link href={prefixHttps(details?.linkedin)} target="_blank">
+              {details?.linkedin}
             </Link>
           </div>
 
           <div className="md:place-self-end print:place-self-end flex items-center gap-2">
             <Github size={14} stroke="0" className="fill-current" />
-            <Link href={prefixHttps(details.github)} target="_blank">
-              {details.github}
+            <Link href={prefixHttps(details?.github)} target="_blank">
+              {details?.github}
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default async function Page() {
 
       <section id="objective" className="space-y-2 print:hidden">
         <h2 className="font-bold text-center">Professional Summary</h2>
-        <p>{details.objective}</p>
+        <p>{details?.objective}</p>
       </section>
 
       <hr className="divide-y print:hidden" />
