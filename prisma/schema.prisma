@@ -34,6 +34,7 @@ model education {
   degree      String
   description String
   endDate     String
+  gpa         String
   id_         Int    @map("id")
   institute   String
   location    String
