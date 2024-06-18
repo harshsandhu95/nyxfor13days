@@ -7,6 +7,13 @@ import ProjectItem from "./_components/ProjectItem";
 import CertificationItem from "./_components/CertificationItem";
 import { prefixHttps } from "@/lib/utils";
 import { getResume } from "@/app/actions";
+import {
+  certifications,
+  education,
+  experience,
+  projects,
+  skills,
+} from "@prisma/client";
 
 export default async function Page() {
   const { details, experience, education, skills, certifications, projects } =
@@ -64,7 +71,7 @@ export default async function Page() {
         <h2 className="font-bold text-center">Education</h2>
 
         <div className="space-y-4">
-          {education.map((item) => (
+          {education.map((item: education) => (
             <EducationItem key={item.id} {...item} />
           ))}
         </div>
@@ -75,7 +82,7 @@ export default async function Page() {
         <h2 className="font-bold text-center">Relevant Experience</h2>
 
         <div className="space-y-4">
-          {experience.map((item) => (
+          {experience.map((item: experience) => (
             <ExperienceItem key={item.id} {...item} />
           ))}
         </div>
@@ -86,7 +93,7 @@ export default async function Page() {
         <h2 className="font-bold text-center">Technical Skills</h2>
 
         <div className="space-y-2 md:space-y-1">
-          {skills.map((skill) => (
+          {skills.map((skill: skills) => (
             <SkillsItem key={skill.title} {...skill} />
           ))}
         </div>
@@ -97,7 +104,7 @@ export default async function Page() {
         <h2 className="font-bold text-center">Projects</h2>
 
         <div className="space-y-2">
-          {projects.map((project) => (
+          {projects.map((project: projects) => (
             <ProjectItem key={project.title} {...project} />
           ))}
         </div>
@@ -108,7 +115,7 @@ export default async function Page() {
         <h2 className="font-bold text-center">Certifications</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-2">
-          {certifications.map((certification) => (
+          {certifications.map((certification: certifications) => (
             <CertificationItem key={certification.title} {...certification} />
           ))}
         </div>
