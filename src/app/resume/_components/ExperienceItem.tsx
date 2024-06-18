@@ -1,6 +1,6 @@
-import { Experience } from "@/lib/types";
+import { experience } from "@prisma/client";
 
-interface Props extends Experience { }
+interface Props extends experience {}
 
 export default function ExperienceItem(props: Props) {
   return (

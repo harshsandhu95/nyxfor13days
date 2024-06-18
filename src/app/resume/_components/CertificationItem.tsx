@@ -1,12 +1,11 @@
-import { Certification } from "@/lib/types";
+import { certifications } from "@prisma/client";
 
-interface Props extends Certification { }
+interface Props extends certifications {}
 
 export default function CertificationItem({
   title,
   issuer,
   date,
-  link,
   skills,
 }: Props) {
   return (

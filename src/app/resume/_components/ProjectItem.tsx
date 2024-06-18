@@ -1,9 +1,9 @@
-import { Project } from "@/lib/types";
 import { prefixHttps } from "@/lib/utils";
+import { projects } from "@prisma/client";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 
-interface Props extends Project { }
+interface Props extends projects {}
 
 export default function ProjectItem(props: Props) {
   return (

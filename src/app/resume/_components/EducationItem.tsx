@@ -1,6 +1,6 @@
-import { Education } from "@/lib/types";
+import { education } from "@prisma/client";
 
-interface Props extends Education { }
+interface Props extends education {}
 
 export default function EducationItem(props: Props) {
   return (

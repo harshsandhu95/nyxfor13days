@@ -1,7 +1,6 @@
-interface Props {
-  title: string;
-  skills: string[];
-}
+import { skills } from "@prisma/client";
+
+interface Props extends skills {}
 
 export default function SkillsItem({ title, skills }: Props) {
   const skillsString = skills.join(", ");
