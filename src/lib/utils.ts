@@ -5,6 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function prefixHttps(url: string) {
-  return url.startsWith("http") ? url : `https://${url}`;
+export function prefixHttps(url: string | undefined) {
+  if (url) return url.startsWith("http") ? url : `https://${url}`;
+
+  return "";
 }
