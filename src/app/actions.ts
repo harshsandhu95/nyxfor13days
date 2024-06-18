@@ -1,66 +1,50 @@
 "use server";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+import prisma from "@/lib/db";
 
 export async function getResume() {
-  const response = await fetch(`${apiUrl}/resume`)
-    .then((res) => res.json())
-    .then((data) => data)
-    .catch((error) => console.error("Error:", error));
+  const details = await prisma.details.findFirst();
+  const certifications = await prisma.certifications.findMany();
+  const education = await prisma.education.findMany();
+  const experience = await prisma.experience.findMany();
+  const projects = await prisma.projects.findMany();
+  const skills = await prisma.skills.findMany();
 
-  return response;
+  return { details, certifications, education, experience, projects, skills };
 }
 
 export async function getDetails() {
-  const response = await fetch(`${apiUrl}/details`)
-    .then((res) => res.json())
-    .then((data) => data.details[0])
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.details.findFirst();
 
   return response;
 }
 
 export async function getEducation() {
-  const response = await fetch(`${apiUrl}/education`)
-    .then((res) => res.json())
-    .then((data) => data.response)
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.education.findMany();
 
   return response;
 }
 
 export async function getExperience() {
-  const response = await fetch(`${apiUrl}/experience`)
-    .then((res) => res.json())
-    .then((data) => data.response)
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.experience.findMany();
 
   return response;
 }
 
 export async function getProjects() {
-  const response = await fetch(`${apiUrl}/projects`)
-    .then((res) => res.json())
-    .then((data) => data.response)
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.projects.findMany();
 
   return response;
 }
 
 export async function getSkills() {
-  const response = await fetch(`${apiUrl}/skills`)
-    .then((res) => res.json())
-    .then((data) => data.response)
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.skills.findMany();
 
   return response;
 }
 
 export async function getCertifications() {
-  const response = await fetch(`${apiUrl}/certifications`)
-    .then((res) => res.json())
-    .then((data) => data.response)
-    .catch((error) => console.error("Error:", error));
+  const response = await prisma.certifications.findMany();
 
   return response;
 }
