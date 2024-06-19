@@ -8,11 +8,14 @@ export default async function Home() {
   const details = await getDetails();
 
   return (
-    <section className="py-12 max-w-prose space-y-4">
+    <section className="py-12 space-y-4">
       <Badge className="md:w-fit flex items-center justify-center gap-2">
         <HardHatIcon size={16} /> Website Under Development
       </Badge>
       <h1 className="text-7xl eading-tight">Hey, I am {details?.name}</h1>
+      <p className="text-lg font-bold">
+        Software Engineer | AI &amp; Web Development Specialist
+      </p>
       <p className="text-lg leading-normal">{details?.objective}</p>
       <Button asChild>
         <Link href="">Let&apos;s Connect!</Link>
