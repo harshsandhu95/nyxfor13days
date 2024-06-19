@@ -15,7 +15,6 @@ type SkillsItems {
 model certifications {
   id     String   @id @default(auto()) @map("_id") @db.ObjectId
   date   String
-  id_    Int      @map("id")
   issuer String
   skills String[]
   title  String
@@ -40,7 +39,6 @@ model education {
   description String
   endDate     String
   gpa         String
-  id_         Int    @map("id")
   institute   String
   location    String
   startDate   String
@@ -51,7 +49,6 @@ model experience {
   company     String
   description String
   endDate     String
-  id_         Int    @map("id")
   location    String
   position    String
   startDate   String
@@ -60,7 +57,6 @@ model experience {
 model projects {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   description String
-  id_         Int     @map("id")
   link        String?
   title       String
 }
