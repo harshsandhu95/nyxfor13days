@@ -6,8 +6,12 @@ export async function getResume() {
   const details = await prisma.details.findFirst();
   const certifications = await prisma.certifications.findMany();
   const education = await prisma.education.findMany();
-  const experience = await prisma.experience.findMany();
-  const projects = await prisma.projects.findMany();
+  const experience = await prisma.experience.findMany({
+    orderBy: { startDate: "desc" },
+  });
+  const projects = await prisma.projects.findMany({
+    orderBy: { id: "desc" },
+  });
   const skills = await prisma.skills.findMany();
 
   return { details, certifications, education, experience, projects, skills };

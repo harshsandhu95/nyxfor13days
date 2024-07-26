@@ -101,8 +101,6 @@ export default async function Page() {
         </div>
       </section>
 
-      <div className="print:break-before-page" />
-
       {/* Projects */}
       <section id="projects" className="space-y-2">
         <h2 className="font-bold text-center">Personal Projects</h2>
@@ -114,11 +112,13 @@ export default async function Page() {
         </div>
       </section>
 
+      <div className="print:break-before-page" />
+
       {/* Certifications */}
       <section id="certifications" className="space-y-2">
         <h2 className="font-bold text-center">Certifications</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-3 gap-x-2 gap-y-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-2 gap-y-1">
           {certifications.map((certification: certifications) => (
             <CertificationItem key={certification.title} {...certification} />
           ))}
