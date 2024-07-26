@@ -10,11 +10,13 @@ export default function CertificationItem({
 }: Props) {
   return (
     <div className="space-y-0">
-      <h3 className="font-bold">{title}</h3>
-      <p>
+      <h3 className="font-bold text-sm">{title}</h3>
+      <p className="text-sm">
         {issuer}, {date}
       </p>
-      {skills && <p className="text-foreground/50">{skills.join(", ")}</p>}
+      {skills && (
+        <p className="text-sm text-foreground/50">{skills.join(", ")}</p>
+      )}
     </div>
   );
 }

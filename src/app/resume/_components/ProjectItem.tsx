@@ -21,7 +21,11 @@ export default function ProjectItem(props: Props) {
         )}
       </div>
 
-      <p>{props.description}</p>
+      <ul className="ml-4 max-w-3xl print:max-w-prose flex flex-col gap-y-1 list-disc list-outside text-sm">
+        {props.description.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }

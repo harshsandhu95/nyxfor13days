@@ -66,17 +66,6 @@ export default async function Page() {
 
       <hr className="divide-y print:hidden" />
 
-      {/* Education */}
-      <section id="education" className="space-y-2">
-        <h2 className="font-bold text-center">Education</h2>
-
-        <div className="space-y-4">
-          {education.map((item: education) => (
-            <EducationItem key={item.id} {...item} />
-          ))}
-        </div>
-      </section>
-
       {/* Experience */}
       <section id="experience" className="space-y-2">
         <h2 className="font-bold text-center">Relevant Experience</h2>
@@ -87,6 +76,8 @@ export default async function Page() {
           ))}
         </div>
       </section>
+
+      <div className="print:break-before-page" />
 
       {/* Technical Skills */}
       <section id="technical-skills" className="space-y-2">
@@ -99,9 +90,22 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* Education */}
+      <section id="education" className="space-y-2">
+        <h2 className="font-bold text-center">Education</h2>
+
+        <div className="space-y-4">
+          {education.map((item: education) => (
+            <EducationItem key={item.id} {...item} />
+          ))}
+        </div>
+      </section>
+
+      <div className="print:break-before-page" />
+
       {/* Projects */}
       <section id="projects" className="space-y-2">
-        <h2 className="font-bold text-center">Projects</h2>
+        <h2 className="font-bold text-center">Personal Projects</h2>
 
         <div className="space-y-2">
           {projects.map((project: projects) => (
@@ -114,7 +118,7 @@ export default async function Page() {
       <section id="certifications" className="space-y-2">
         <h2 className="font-bold text-center">Certifications</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-3 gap-x-2 gap-y-1">
           {certifications.map((certification: certifications) => (
             <CertificationItem key={certification.title} {...certification} />
           ))}

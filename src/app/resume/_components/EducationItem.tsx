@@ -20,7 +20,11 @@ export default function EducationItem(props: Props) {
         </p>
       </div>
 
-      <p className="max-w-3xl print:max-w-fit">{props.description}</p>
+      <ul className="ml-4 max-w-3xl print:max-w-prose flex flex-col gap-y-1 list-disc list-outside text-sm">
+        {props.description.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
